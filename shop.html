@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store Bill Generator</title>
+	<script src="main.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        #bill {
+            width: 80%;
+            margin: 0 auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .total {
+            font-weight: bold;
+        }
+        .print-button {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Online Store Bill Generator</h1>
+    <div id="bill">
+        <h2>Shopping Cart</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price per Unit ($)</th>
+                    <th>Quantity</th>
+                    <th>Total ($)</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Cart items will be added here dynamically -->
+            </tbody>
+        </table>
+        <p class="total">Total: $<span id="total-amount">0.00</span></p>
+        <button onclick="calculateTotal()">Calculate Total</button>
+        <button class="print-button" onclick="window.print()">Print Bill</button>
+    </div>
+
+    
+</body>
+</html>
